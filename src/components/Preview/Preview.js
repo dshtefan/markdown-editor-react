@@ -3,7 +3,7 @@ import './Preview.scss';
 import LeftIcon from'./svg/left.svg';
 import RightIcon from'./svg/right.svg';
 
-const Preview = () =>{
+const Preview = ({htmlData}) =>{
   return (
     <div className="preview">
       <div className="preview-header">
@@ -14,7 +14,7 @@ const Preview = () =>{
           <RightIcon/>
         </div>
       </div>
-      <div className="preview-content" />
+      <div className="preview-content" dangerouslySetInnerHTML={htmlData()}/>
     </div>
   )
 };

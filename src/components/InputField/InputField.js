@@ -1,10 +1,14 @@
 import React from 'react';
 import './InputField.scss';
 
-const InputField = () => {
+const InputField = ({ value, onChange}) => {
   return(
     <div className="md-content">
-      <textarea className="input-field" autoFocus />
+      <textarea
+        className="input-field"
+        autoFocus
+        value={value}
+        onChange={onChange}/>
     </div>
   )
 };
