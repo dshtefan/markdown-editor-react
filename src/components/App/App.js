@@ -41,6 +41,14 @@ const App = () => {
     localStorage.setItem('text', text);
   };
 
+  const getFile = () => {
+    return (
+      URL.createObjectURL(
+        new Blob([getHtml().__html], {type: 'text/plain'})
+      )
+    )
+  };
+
   return(
     <div id="app" className={'app'}>
       <InputField
@@ -51,6 +59,7 @@ const App = () => {
         onLeft={onLeft}
         onRight={onRight} />
       <Menu
+        getFile={getFile}
         saveToLocalStorage={saveToLocalStorage}/>
     </div>
   )
