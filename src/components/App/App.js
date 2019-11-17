@@ -9,24 +9,34 @@ const App = () => {
   const [text, setText] = useState('');
 
   const onChange = (event) => {
-    let newText = event.target.value;
-    setText(newText);
+    setText(event.target.value);
   };
 
   const getHtml = () => {
-
-    console.log(marked('\n\n\r\n', {breaks: true}));
     return {
       __html: marked(text)
     }
   };
 
+  const onLeft = () => {
+    document.getElementById('app').classList.add('open');
+    document.getElementById('app').classList.remove('close');
+  };
+
+  const onRight = () => {
+    document.getElementById('app').classList.remove('open');
+    document.getElementById('app').classList.add('close');
+  };
+
   return(
-    <div id="app">
+    <div id="app" className={'app'}>
       <InputField
         value={ text }
         onChange={onChange} />
-      <Preview htmlData={getHtml}/>
+      <Preview
+        htmlData={getHtml}
+        onLeft={onLeft}
+        onRight={onRight} />
       <Menu/>
     </div>
   )

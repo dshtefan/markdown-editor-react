@@ -2,5 +2,28 @@
   height: inherit;
   display: grid;
   grid-template-areas: "md html menu";
+}
+.app {
   grid-template-columns: 1fr 1fr 40px;
 }
+.close {
+  animation: closeTab 300ms ease;
+}
+.open {
+  animation: openTab 300ms ease;
+  grid-template-columns: 0 1fr 40px;
+}
+@keyframes openTab {
+  @for $i from 1 through 100 {
+    #{$i}% {
+      grid-template-columns: #{100 - $i}fr #{$i + 100}fr 40px;
+    }
+  }
+}
+@keyframes closeTab {
+   @for $i from 1 through 100 {
+     #{$i}% {
+       grid-template-columns: #{$i}fr #{200 - $i}fr 40px;
+     }
+   }
+ }
