@@ -1,0 +1,19 @@
+.menu{
+  background-color: #979797;
+  grid-area: menu;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.menu div{
+  cursor: pointer;
+  margin: 30px auto;
+  height: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.menu div:hover{
+  background-color: #777777;
+}

@@ -1,0 +1,14 @@
+.md-content {
+  grid-area: md;
+}
+.input-field {
+  height: calc(100% - 50px);
+  width: calc(100% - 40px);;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 10px;
+  overflow: auto;
+  resize: none;
+  padding: 0;
+  border: 0;
+}

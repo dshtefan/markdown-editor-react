@@ -1,0 +1,6 @@
+#app {
+  height: inherit;
+  display: grid;
+  grid-template-areas: "md html menu";
+  grid-template-columns: 1fr 1fr 40px;
+}

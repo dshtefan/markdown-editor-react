@@ -55,6 +55,17 @@ module.exports = (env = {}) => {
           ]
         },
 
+        {
+          test: /\.svg$/,
+          use: [
+            { loader: "babel-loader" },
+            {
+              loader: "react-svg-loader",
+              options: { jsx: true }
+            }
+          ]
+        },
+
         // Loading fonts
         {
           test: /\.(ttf|otf|eot|woff|woff2)$/,
