@@ -1,4 +1,4 @@
-.menu{
+.menu {
   background-color: #979797;
   grid-area: menu;
   display: flex;
@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: center;
 }
-.menu div{
+.menu div {
   cursor: pointer;
   margin: 10px auto;
   height: 60px;
@@ -15,6 +15,6 @@
   justify-content: center;
   align-items: center;
 }
-.menu div:hover{
+.menu div:hover {
   background-color: #8b8b8b;
 }
