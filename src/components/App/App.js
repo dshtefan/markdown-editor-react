@@ -19,13 +19,13 @@ const App = () => {
   };
 
   const onLeft = () => {
-    document.getElementById('app').classList.add('open');
-    document.getElementById('app').classList.remove('close');
+    document.getElementById('app').classList.add('tab--open');
+    document.getElementById('app').classList.remove('tab--close');
   };
 
   const onRight = () => {
-    document.getElementById('app').classList.remove('open');
-    document.getElementById('app').classList.add('close');
+    document.getElementById('app').classList.remove('tab--open');
+    document.getElementById('app').classList.add('tab--close');
   };
 
   return(

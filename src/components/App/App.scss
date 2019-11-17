@@ -6,10 +6,10 @@
 .app {
   grid-template-columns: 1fr 1fr 40px;
 }
-.close {
+.tab--close {
   animation: closeTab 300ms ease;
 }
-.open {
+.tab--open {
   animation: openTab 300ms ease;
   grid-template-columns: 0 1fr 40px;
 }
