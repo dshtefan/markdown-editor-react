@@ -7,6 +7,7 @@ import { getHtml, saveToLocalStorage, createFile, openFile } from "../../utils";
 
 const App = () => {
   const [text, setText] = useState('');
+  const [isTabOpen, setIsTabOpen] = useState(false);
   const appEl = useRef(null);
 
   useEffect(() => {
@@ -21,6 +22,7 @@ const App = () => {
   const onLeft = () => {
     appEl.current.classList.add('tab--open');
     appEl.current.classList.remove('tab--close');
+    setIsTabOpen(true);
   };
 
   const onRight = () => {
@@ -28,6 +30,7 @@ const App = () => {
     if ([...classes].filter((el) => el === 'tab--open').length === 0) return;
     classes.remove('tab--open');
     classes.add('tab--close');
+    setIsTabOpen(false);
   };
 
   return (
@@ -38,11 +41,12 @@ const App = () => {
       <Preview
         htmlData={ () => getHtml(text) }
         onLeft={ onLeft }
-        onRight={ onRight } />
+        onRight={ onRight }
+        isTabOpen={ isTabOpen } />
       <Menu
         getFile={ () => createFile(text) }
         saveToLocalStorage={ () => saveToLocalStorage(text) }
-        openFile={ (evt) => openFile(evt, setText) }/>
+        openFile={ (evt) => openFile(evt, setText) } />
     </div>
   );
 };
