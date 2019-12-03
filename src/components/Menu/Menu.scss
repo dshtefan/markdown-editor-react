@@ -7,6 +7,7 @@
   justify-content: center;
 }
 .menu div {
+  position: relative;
   cursor: pointer;
   margin: 10px auto;
   height: 60px;
@@ -17,4 +18,11 @@
 }
 .menu div:hover {
   background-color: #c3c3c3;
+}
+.file-upload {
+  cursor: pointer;
+  opacity: 0.0;
+  position: absolute;
+  width: 100%;
+  height:100%;
 }

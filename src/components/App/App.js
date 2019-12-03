@@ -3,7 +3,7 @@ import './App.scss';
 import InputField from "../InputField";
 import Preview from "../Preview";
 import Menu from "../Menu";
-import { getHtml, saveToLocalStorage, createFile } from "../../utils";
+import { getHtml, saveToLocalStorage, createFile, openFile } from "../../utils";
 
 const App = () => {
   const [text, setText] = useState('');
@@ -24,8 +24,10 @@ const App = () => {
   };
 
   const onRight = () => {
-    appEl.current.classList.remove('tab--open');
-    appEl.current.classList.add('tab--close');
+    const classes = appEl.current.classList;
+    if ([...classes].filter((el) => el === 'tab--open').length === 0) return;
+    classes.remove('tab--open');
+    classes.add('tab--close');
   };
 
   return (
@@ -39,7 +41,8 @@ const App = () => {
         onRight={ onRight } />
       <Menu
         getFile={ () => createFile(text) }
-        saveToLocalStorage={ () => saveToLocalStorage(text) }/>
+        saveToLocalStorage={ () => saveToLocalStorage(text) }
+        openFile={ (evt) => openFile(evt, setText) }/>
     </div>
   );
 };

@@ -14,14 +14,14 @@
   grid-template-columns: 0 1fr 40px;
 }
 @keyframes openTab {
-  @for $i from 1 through 100 {
+  @for $i from 0 through 100 {
     #{$i}% {
       grid-template-columns: #{100 - $i}fr #{$i + 100}fr 40px;
     }
   }
 }
 @keyframes closeTab {
-   @for $i from 1 through 100 {
+   @for $i from 0 through 100 {
      #{$i}% {
        grid-template-columns: #{$i}fr #{200 - $i}fr 40px;
      }
