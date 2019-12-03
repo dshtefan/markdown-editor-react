@@ -1,6 +1,7 @@
-const openTab = (appEl, setIsTabOpen) => {
-  appEl.current.classList.add('tab--open');
-  appEl.current.classList.remove('tab--close');
+const openTab = (appElement, setIsTabOpen) => {
+  const classes = appElement.current.classList;
+  classes.add('tab--open');
+  classes.remove('tab--close');
   setIsTabOpen(true);
 };
 

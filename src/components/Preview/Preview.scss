@@ -26,7 +26,6 @@
   width: calc(100% - 40px);
   resize: none;
   overflow: auto;
-
   * {
     margin-block-start: 1em;
     margin-block-end: 1em;
@@ -34,12 +33,10 @@
   ul {
     padding-inline-start: 40px;
   }
-
   blockquote {
     margin-inline-start: 40px;
     margin-inline-end: 40px;
   }
-
   pre {
     font-family: monospace;
   }

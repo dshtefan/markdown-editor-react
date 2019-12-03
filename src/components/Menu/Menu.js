@@ -2,7 +2,7 @@ import React from 'react';
 import './Menu.scss';
 import SaveIcon from './svg/save.svg';
 import DownloadIcon from './svg/download.svg';
-import OpenIcon from './svg/open.svg'
+import OpenIcon from './svg/open.svg';
 
 const Menu = ({ saveToLocalStorage, getFile, openFile }) => (
   <div className="menu">
@@ -14,7 +14,7 @@ const Menu = ({ saveToLocalStorage, getFile, openFile }) => (
       <SaveIcon/>
     </div>
     <div title={'Save to Downloads'}>
-      <a href={getFile()} download={'index'}>
+      <a href={ getFile() } download={'index'}>
         <DownloadIcon/>
       </a>
     </div>

@@ -8,12 +8,12 @@ const Preview = ({ htmlData, openTab, closeTab, isTabOpen }) => (
     <div className="preview-header">
       {
         !isTabOpen ?
-        <div onClick={ openTab }>
-          <LeftIcon/>
-        </div> :
-        <div onClick={ closeTab }>
-          <RightIcon/>
-        </div>
+          <div onClick={ openTab }>
+            <LeftIcon/>
+          </div> :
+          <div onClick={ closeTab }>
+            <RightIcon/>
+          </div>
       }
     </div>
     <div className="preview-content" dangerouslySetInnerHTML={htmlData()}/>
