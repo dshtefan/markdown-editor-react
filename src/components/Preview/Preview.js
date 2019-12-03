@@ -3,15 +3,15 @@ import './Preview.scss';
 import LeftIcon from'./svg/left.svg';
 import RightIcon from'./svg/right.svg';
 
-const Preview = ({ htmlData, onLeft, onRight, isTabOpen }) => (
+const Preview = ({ htmlData, openTab, closeTab, isTabOpen }) => (
   <div className="preview">
     <div className="preview-header">
       {
         !isTabOpen ?
-        <div onClick={onLeft}>
+        <div onClick={ openTab }>
           <LeftIcon/>
         </div> :
-        <div onClick={onRight}>
+        <div onClick={ closeTab }>
           <RightIcon/>
         </div>
       }

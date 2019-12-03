@@ -3,7 +3,7 @@ import './App.scss';
 import TextField from "../TextField";
 import Preview from "../Preview";
 import Menu from "../Menu";
-import { getHtml, saveToLocalStorage, createFile, openFile } from "../../utils";
+import { getHtml, saveToLocalStorage, createFile, openFile, closeTab, openTab } from "../../utils";
 
 const App = () => {
   const [text, setText] = useState('');
@@ -19,20 +19,6 @@ const App = () => {
     setText(event.currentTarget.value);
   };
 
-  const onLeft = () => {
-    appEl.current.classList.add('tab--open');
-    appEl.current.classList.remove('tab--close');
-    setIsTabOpen(true);
-  };
-
-  const onRight = () => {
-    const classes = appEl.current.classList;
-    if ([...classes].filter((el) => el === 'tab--open').length === 0) return;
-    classes.remove('tab--open');
-    classes.add('tab--close');
-    setIsTabOpen(false);
-  };
-
   return (
     <div id="app" className={'app'} ref={appEl}>
       <TextField
@@ -40,8 +26,8 @@ const App = () => {
         onChange={ onChange } />
       <Preview
         htmlData={ () => getHtml(text) }
-        onLeft={ onLeft }
-        onRight={ onRight }
+        openTab={ () => openTab(appEl, setIsTabOpen) }
+        closeTab={ () => closeTab(appEl, setIsTabOpen) }
         isTabOpen={ isTabOpen } />
       <Menu
         getFile={ () => createFile(text) }
