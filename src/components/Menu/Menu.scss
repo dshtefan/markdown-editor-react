@@ -1,5 +1,5 @@
 .menu {
-  background-color: #979797;
+  background: linear-gradient(180deg, #CDCDCD 0%, #E5E5E5 100%);
   grid-area: menu;
   display: flex;
   flex-direction: column;
@@ -16,5 +16,5 @@
   align-items: center;
 }
 .menu div:hover {
-  background-color: #8b8b8b;
+  background-color: #c3c3c3;
 }
