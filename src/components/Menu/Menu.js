@@ -1,6 +1,5 @@
 import React from 'react';
 import './Menu.scss';
-import LinkIcon from './svg/link.svg';
 import SaveIcon from './svg/save.svg';
 import DownloadIcon from './svg/download.svg';
 import OpenIcon from './svg/open.svg'
