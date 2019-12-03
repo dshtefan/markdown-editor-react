@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import './App.scss';
 import InputField from "../InputField";
 import Preview from "../Preview";
@@ -8,6 +8,7 @@ import marked from "marked";
 const App = () => {
   const [text, setText] = useState('');
   const [checkingLocalStorage, setCheckingLocalStorage] = useState(true);
+  const appEl = useRef(null);
 
   useEffect(() => {
     if (checkingLocalStorage) {
@@ -28,13 +29,13 @@ const App = () => {
   };
 
   const onLeft = () => {
-    document.getElementById('app').classList.add('tab--open');
-    document.getElementById('app').classList.remove('tab--close');
+    appEl.current.classList.add('tab--open');
+    appEl.current.classList.remove('tab--close');
   };
 
   const onRight = () => {
-    document.getElementById('app').classList.remove('tab--open');
-    document.getElementById('app').classList.add('tab--close');
+    appEl.current.classList.remove('tab--open');
+    appEl.current.classList.add('tab--close');
   };
 
   const saveToLocalStorage = () => {
@@ -50,7 +51,7 @@ const App = () => {
   };
 
   return(
-    <div id="app" className={'app'}>
+    <div id="app" className={'app'} ref={appEl}>
       <InputField
         value={ text }
         onChange={onChange} />
