@@ -1,7 +1,7 @@
 import React from 'react';
-import './InputField.scss';
+import './TextField.scss';
 
-const InputField = ({ value, onChange}) => (
+const TextField = ({ value, onChange}) => (
   <div className="md-content">
     <textarea
       className="input-field"
@@ -11,4 +11,4 @@ const InputField = ({ value, onChange}) => (
   </div>
 );
 
-export default InputField;
+export default TextField;

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './App.scss';
-import InputField from "../InputField";
+import TextField from "../TextField";
 import Preview from "../Preview";
 import Menu from "../Menu";
 import { getHtml, saveToLocalStorage, createFile, openFile } from "../../utils";
@@ -35,7 +35,7 @@ const App = () => {
 
   return (
     <div id="app" className={'app'} ref={appEl}>
-      <InputField
+      <TextField
         value={ text }
         onChange={ onChange } />
       <Preview
