@@ -4,7 +4,7 @@ import './TextField.scss';
 const TextField = ({ value, onChange }) => (
   <div className="md-content">
     <textarea
-      className="input-field"
+      className="text-field"
       autoFocus
       value={ value }
       onChange={ onChange } />
