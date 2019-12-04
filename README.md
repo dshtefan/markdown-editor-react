@@ -4,7 +4,7 @@
 
 ### Демо
 
-Чтобы посмотреть на него в действии, перейди по [этой ссылке](https://https://dshtefan.github.io/markdown-editor-react/).
+Чтобы посмотреть на него в действии, перейди по [этой ссылке](https://dshtefan.github.io/markdown-editor-react/).
 
 ### Используемый стек
 
